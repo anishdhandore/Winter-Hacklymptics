@@ -19,7 +19,7 @@ def getUserLocationAutomatically():
 
 def getUserLocationManually(location):
     url = "https://api.radar.io/v1/geocode/forward?query={}".format(location)
-    data = requests.get(url)
+    data = requests.get(url, headers = HEADERS)
     data = data.json()
     #pprint(data)
     latitude = data["addresses"][0]["latitude"]
