@@ -18,7 +18,13 @@ def getUserLocationAutomatically():
 
 
 def getUserLocationManually(location):
-    pass
+    url = "https://api.radar.io/v1/geocode/forward?query={}".format(location)
+    data = requests.get(url)
+    data = data.json()
+    #pprint(data)
+    latitude = data["addresses"][0]["latitude"]
+    longitude = data["addresses"][0]["longitude"]
+    return latitude, longitude
 
 def findStoresInLocation(coordinates):
     url ="https://api.radar.io/v1/search/places?categories=thrift-or-consignment-store&near=+"+ coordinates['lat']+ ","+coordinates['lon']+"&radius=10000&limit=10"
