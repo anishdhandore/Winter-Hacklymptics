@@ -1,4 +1,4 @@
-# Winter Hacklymptics
+# Hackathon Project for Winter Hacklymptics
 # DonationStation
 
 ### By: Kyle Java, Neala Mendoza, Anish Dhandore
