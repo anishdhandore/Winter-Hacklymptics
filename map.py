@@ -1,39 +1,28 @@
 from keys import *
 import gmplot
 
-def getMap():
+def getMap(attractions_lats , attractions_lngs , my_lng, my_lat):
     # Create the map plotter:
     apikey = api_key # (your API key here)
-    gmap = gmplot.GoogleMapPlotter(37.766956, -122.448481, 14, apikey=apikey)
+    gmap = gmplot.GoogleMapPlotter(33.4936408996582,-117.14836120605469, 14, apikey=apikey)
 
     # Mark a hidden gem:
     gmap.marker(37.770776, -122.461689, color='cornflowerblue')
 
     # Highlight some attractions:
     attractions_lats, attractions_lngs = zip(*[
-        (37.769901, -122.498331),
-        (37.768645, -122.475328),
-        (37.771478, -122.468677),
-        (37.769867, -122.466102),
-        (37.767187, -122.467496),
-        (37.770104, -122.470436)
+        (33.50803, -117.142051),
+        (33.511451, -117.160034),
+        (33.508071, -117.124669),
+        (33.51651586360942, -117.16274810169405),
+        (33.516662, -117.124372),
+        (33.475274, -117.16311)
     ])
     gmap.scatter(attractions_lats, attractions_lngs, color='#3B0B39', size=40, marker=True)
 
     # Outline the Golden Gate Park:
-    golden_gate_park = zip(*[
-        (37.771269, -122.511015),
-        (37.773495, -122.464830),
-        (37.774797, -122.454538),
-        (37.771988, -122.454018),
-        (37.773646, -122.440979),
-        (37.772742, -122.440797),
-        (37.771096, -122.453889),
-        (37.768669, -122.453518),
-        (37.766227, -122.460213),
-        (37.764028, -122.510347)
-    ])
+
 
 
     # Draw the map to an HTML file:
-    gmap.draw('templates/search.html')
+    gmap.draw('templates/map.html')

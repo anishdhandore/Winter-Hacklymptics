@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DonationStation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #6f42c1; padding: 20px;">
+      <div class="container container-fluid">
+        <!--<a class="navbar-brand active" href="/">
+          <img src="/static/images/logo1.jpg" alt="logo" width="100" height="104" class="d-inline-block mx-3">
+          <h5 class="lead">
+            DonationStation
+          </h5>
+        </a>-->
+      <ul class="navbar-nav">
+        <h4>Welcome To DonationStation!</h4>
+        <!--
+        <li class="nav-item">
+          <a href="/" class="nav-link active" style="padding-right: 40px; font-size: x-large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/search" class="nav-link" style="padding-right: 450px; font-size: x-large;">Search</a>
+        </li>
+        -->
+      </ul>
+      </div>
+    </nav>
+
+    <form class="text-center" action="/map" method="POST">
+      <input type="submit" name="my-location" value="View On Map!">
+    </form>
+    <div class="container py-5">
+      <table class="table">
+        <thead class="text-center">
+          <tr>
+
+            <th><h1 class="text-center"> Your City: {{ user_city }} </h1></th>
+            <th></th>
+            <td></td>
+
+          </tr>
+        </thead>
+        <tbody>
+          <th><h2 class="text-center">Thrift Stores In Your Area </h2></th>
+          {% for biz in places %}
+            <tr>
+              <th>
+                Name: {{ biz['name']}} <br>
+
+              </th>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

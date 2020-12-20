@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="../static/stylesheets/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   </head>
   <body>
@@ -29,10 +30,11 @@
     </nav>
 
     <div  class="top row">
-      <div  class=" text-center">
+      <div  class=" text-center" style="background-image: url('../static/images/background.png');">
+        <br><br><br><br><br><br><br>
         <h1 class="centered">DonationStation</h1>
         <h4 class="centered">Be Someone's Reason To Smile! Donate As Much As You Can!</h4>
-        <img src="../static/images/background.jpg" id = "bg-photo">
+        <br><br><br><br><br>
       </div>
     </div>
 
@@ -59,6 +61,7 @@
           Navigate to the search bar of our website and enter the place you are interested at donating.
           You can also choose your location directly, which will give straight searches for thrift shops around you.
         </h3>
+        <br><br>
       </div>
     </div>
 
@@ -103,6 +106,19 @@
       </a>
     </div>
     </div>
+    </div>
+
+    <div class="text-center py-5 input">
+      <h1 >Donate to a store near you!</h1>
+      <form class="" action="/results" method="POST">
+        <div class="col">
+          <h2>Input Your Zip Code!</h2>
+          <input type="post" name="location" value="Zip Code">
+          <input type="submit" name="location" value="Submit!">
+          <h2>Or</h2>
+          <input type="submit" name="location" value="Use Your Own Location!">
+        </div>
+      </form>
     </div>
 
 
