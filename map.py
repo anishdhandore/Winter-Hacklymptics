@@ -18,7 +18,7 @@ def getMap():
         (37.767187, -122.467496),
         (37.770104, -122.470436)
     ])
-    gmap.scatter(attractions_lats, attractions_lngs, color='#3B0B39', size=40, marker=False)
+    gmap.scatter(attractions_lats, attractions_lngs, color='#3B0B39', size=40, marker=True)
 
     # Outline the Golden Gate Park:
     golden_gate_park = zip(*[
@@ -33,7 +33,7 @@ def getMap():
         (37.766227, -122.460213),
         (37.764028, -122.510347)
     ])
-    gmap.polygon(*golden_gate_park, color='cornflowerblue', edge_width=10)
+
 
     # Draw the map to an HTML file:
-    gmap.draw('templates/map.html')
+    gmap.draw('templates/search.html')

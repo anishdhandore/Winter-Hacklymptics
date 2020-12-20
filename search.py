@@ -30,4 +30,31 @@ def findStoresInLocation(coordinates):
     url ="https://api.radar.io/v1/search/places?categories=thrift-or-consignment-store&near=+"+ coordinates['lat']+ ","+coordinates['lon']+"&radius=10000&limit=10"
     data = requests.get(url = url, headers = HEADERS)
     data = data.json()
-    pprint(data)
+    return (data['places'])
+
+
+def createGeofence(places):
+    url = 'https://api.radar.io/v1/geofences'
+    for place in places:
+        #url = ('https://api.radar.io/v1/geofences'+'\description='+place['name'] +"\type=" + place['location']['type']+ '\coordinates=' + str(place['location']['coordinates']))
+        req = requests.post(url = url , headers = HEADERS)
+        print(req)
+
+coordinates= getUserLocationAutomatically()
+data = findStoresInLocation(coordinates)
+
+tag = '123test'
+externalId = 'extest'
+description = 'myshop'
+coordinates = [33.4936408996582,-117.14836120605469]
+radius = 100
+type = 'circle'
+url  = 'https://api.radar.io/v1/geofences/thriftstorename/3'
+data = requests.put(url  = url , headers = HEADERS)
+print(data)
+
+
+url = 'https://api.radar.io/v1/geofences'
+data = requests.get(url = url, headers= HEADERS)
+data = data.json()
+pprint(data)

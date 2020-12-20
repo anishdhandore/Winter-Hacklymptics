@@ -12,6 +12,7 @@ def index():
 def search():
     coordinates = {}
     if (request.method == 'POST'):
+        getMap()
         coordinates = getUserLocationAutomatically()
 
     return render_template('search.html' , coordinates = coordinates)
