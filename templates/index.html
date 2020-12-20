@@ -3,39 +3,92 @@
   <head>
     <meta charset="utf-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="../static/stylesheets/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #6f42c1; padding: 20px;">
-      <div class="container">
+      <div class="container container-fluid">
+        <!--<a class="navbar-brand active" href="/">
+          <img src="/static/images/logo1.jpg" alt="logo" width="100" height="104" class="d-inline-block mx-3">
+          <h5 class="lead">
+            DonationStation
+          </h5>
+        </a>-->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="/" class="nav-link active" style="padding-left: 460px; font-size: x-large;">Home</a>
+          <a href="/" class="nav-link" style=" font-size: x-large;">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/search" class="nav-link" style="padding-left: 50px; font-size: x-large;">Search</a>
+          <a href="/" class="nav-link" style=" font-size: x-large;">Search</a>
         </li>
+        <li class="nav-item">
+          <a href="/" class="nav-link" style=" font-size: x-large;">Map</a>
+        </li>
+        <li class="nav-item">
+          <a href="/" class="nav-link" style=" font-size: x-large;">About</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a href="/" class="nav-link active" style="padding-right: 40px; font-size: x-large;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/search" class="nav-link" style="padding-right: 450px; font-size: x-large;">Search</a>
+        </li>
+        -->
       </ul>
       </div>
     </nav>
+
+    <div  class="top row">
+      <div  class=" text-center" style="background-image: url('../static/images/background.png');">
+        <br><br><br><br><br><br><br><br>
+        <h1 class="centered-head">DonationStation</h1>
+        <h4 class="centered-sub">Be Someone's Reason To Smile! Donate As Much As You Can!</h4>
+        <br><br><br><br><br><br><br>
+      </div>
     </div>
 
-    <div class="container text-center" style="padding-top: 100px;">
-      <h1 class="display-1">
-        DonationStation
-      </h1>
-      <hr>
-      <figure class="text-center">
-        <blockquote class="blockquote">
-        <p>Be the reason for someone's smile. Donate as much as you can!</p>
-      </blockquote>
+    <div class="row py-5 px-5" style="background-color: #c9c9c9;">
+      <div class="container text-center">
+        <h1>
+          What is Donation Station?
+        </h1>
+        <h3 class="lead" style="font-size: x-large;">
+          Through our site, you would now be able to search for thrift stores in your region
+           and make a heartful move to give old garments to the destitute and the poor individuals.
+            This is a stage that straightforwardly connects you to the shops that give away old garments
+             to associations that help oppressed individuals. Little assistance from your side can help
+             individuals wear garments, yet in addition a grin on their faces.
+        </h3>
+      </div>
+    </div>
+    <div class="row py-5 px-5" style="background-color: #e6e6e3;">
+      <div class="container text-center">
+        <h1>
+          How to Donate?
+        </h1>
+        <h3 class="lead" style="font-size: x-large;">
+          Navigate to the search bar of our website and enter the place you are interested at donating.
+          You can also choose your location directly, which will give straight searches for thrift shops around you.
+        </h3>
+        <br><br>
+      </div>
     </div>
 
-    <div class="container mx-5 my-5 px-5 py-5">
-    <div id="carouselExampleIndicators" class="carousel slide  mx-5 my-5 px-5" data-bs-ride="carousel">
+    <div class="row px-5" style="background-color: #121212;">
+    <div class="container text-center mt-5" style="color: #c2c2c2;">
+      <h1>Take a Look at the Thrift Shop Gallery....</h1>
+    </div>
+    <div class="container px-5">
+    <div id="carouselExampleInterval" class="carousel slide  mx-5 my-5 px-5" data-bs-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="3"></li>
+        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="4"></li>
+
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -44,17 +97,42 @@
         <div class="carousel-item">
           <img src="/static/images/store_2.jpg" class="d-block w-100" alt="photo">
         </div>
+        <div class="carousel-item">
+          <img src="/static/images/store_3.jpg" class="d-block w-100" alt="photo">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/images/store_4.jpg" class="d-block w-100" alt="photo">
+        </div>
+        <div class="carousel-item">
+          <img src="/static/images/store_5.jpg" class="d-block w-100" alt="photo">
+        </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="false"></span>
         <span class="visually-hidden">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="false"></span>
         <span class="visually-hidden">Next</span>
       </a>
     </div>
     </div>
+    </div>
+
+    <div class="text-center py-5 input">
+      <h1 >Donate to a store near you!</h1>
+      <form class="" action="/results" method="POST">
+        <div class="col">
+          <h2>Input Your Zip Code!</h2>
+          <input type="post" name="location" value="Zip Code">
+          <input type="submit" name="location" value="Submit!">
+          <h2>Or</h2>
+          <input type="submit" name="location" value="Use Your Own Location!">
+        </div>
+      </form>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
 </html>
